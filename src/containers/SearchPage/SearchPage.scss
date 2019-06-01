@@ -1,0 +1,14 @@
+.SearchPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 60vh;
+  margin-top: 80px;
+
+  button,
+  .search-input {
+    background-color: white;
+    font-size: 30px;
+    padding: 8px;
+  }
+}

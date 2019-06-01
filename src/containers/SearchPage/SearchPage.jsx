@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchLocations } from '../../api/fetchLocations';
 import { fetchLatLong } from '../../api/fetchLatLong';
-import { setLocations } from '../../actions';
+import { setLocations, setUserLocation } from '../../actions';
 
 
 
@@ -25,15 +25,34 @@ class SearchPage extends Component {
     const { zipcode, distance } = this.state;
     this.props.history.push('/kys/locations');
     fetchLatLong(zipcode)
-      .then(location => fetchLocations(location, distance))
+      .then(location => {
+        this.props.setUserLocation(location);
+        return fetchLocations(location, distance);
+      })
       .then(results => this.props.setLocations(results))
   }
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <input type="text" name="zipcode" className="search-input" onChange={this.handleChange}/>
-        <input type="text" name="distance" className="search-input" onChange={this.handleChange} />
+      <form className="SearchPage" onSubmit={this.handleSubmit}>
+        <input 
+          type="text" 
+          name="zipcode" 
+          placeholder="Zipcode..."
+          className="search-input" 
+          onChange={this.handleChange}
+        />
+        <select 
+          name="distance" 
+          onChange={this.handleChange}
+          className="search-input"
+        >
+          <option value="10">10 miles</option>
+          <option value="20">20 miles</option>
+          <option value="30">30 miles</option>
+          <option value="40">40 miles</option>
+          <option value="50">50 miles</option>
+        </select>
         <button type="submit" >
           Use zipcode
         </button>
@@ -43,7 +62,8 @@ class SearchPage extends Component {
 }
 
 export const mapDispatchToProps = (dispatch)  => ({
-  setLocations: (locations) => dispatch(setLocations(locations))
+  setLocations: (locations) => dispatch(setLocations(locations)),
+  setUserLocation: (location) => dispatch(setUserLocation(location))
 });
 
 export default connect(null, mapDispatchToProps)(SearchPage);

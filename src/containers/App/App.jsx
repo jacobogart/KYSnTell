@@ -6,11 +6,13 @@ import { TellHome } from '../TellHome/TellHome';
 import SearchPage from '../SearchPage/SearchPage';
 import ResultsPage from '../RestultsPage/ResultsPage';
 import LocationPage from '../LocationPage/LocationPage';
+import { Header } from '../../components/Header/Header';
 
 export class App extends Component {
   render() {
     return (
       <div className='App'>
+        <Route path='/' component={Header} />
         <Switch >
           <Route exact path='/' component={Splash} />
           <Route exact path='/kys' component={SearchPage} />
