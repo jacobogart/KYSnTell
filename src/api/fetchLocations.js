@@ -1,4 +1,5 @@
 import { url } from "./utilities";
+import { locationCleaner } from "./cleaners";
 
 export const fetchLocations = (location, distance) => {
   const { lat, lng } = location
@@ -14,6 +15,6 @@ export const fetchLocations = (location, distance) => {
         return response.json();
       }
     })
-    .then(results => results.services[0].providers)
+    .then(results => results.services[0].providers.map(location => locationCleaner(location)))
     .catch(error => console.log(error))
 }

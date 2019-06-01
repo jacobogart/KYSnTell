@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { fetchLocations } from '../../api/fetchLocations';
 import { fetchLatLong } from '../../api/fetchLatLong';
+import { setLocations } from '../../actions';
 
 
 
@@ -19,11 +21,12 @@ class SearchPage extends Component {
   }
 
   handleSubmit = (e) => {
-    const { zipcode, distance } = this.state;
     e.preventDefault();
+    const { zipcode, distance } = this.state;
+    this.props.history.push('/kys/locations');
     fetchLatLong(zipcode)
       .then(location => fetchLocations(location, distance))
-      .then(results => console.log(results))
+      .then(results => this.props.setLocations(results))
   }
 
   render() {
@@ -39,8 +42,8 @@ class SearchPage extends Component {
   }
 }
 
-export const mapStateToProps = (state)  => ({
-
+export const mapDispatchToProps = (dispatch)  => ({
+  setLocations: (locations) => dispatch(setLocations(locations))
 });
 
-export default connect(mapStateToProps)(SearchPage);
+export default connect(null, mapDispatchToProps)(SearchPage);
