@@ -5,6 +5,7 @@ import { Splash } from '../../components/Splash/Splash';
 import { TellHome } from '../TellHome/TellHome';
 import SearchPage from '../SearchPage/SearchPage';
 import ResultsPage from '../RestultsPage/ResultsPage';
+import LocationPage from '../LocationPage/LocationPage';
 
 export class App extends Component {
   render() {
@@ -14,6 +15,7 @@ export class App extends Component {
           <Route exact path='/' component={Splash} />
           <Route exact path='/kys' component={SearchPage} />
           <Route exact path='/kys/locations' component={ResultsPage} />
+          <Route path='/kys/locations/:id' component={LocationPage} />
           <Route exact path='/tell' component={TellHome} />
         </Switch>
       </div>

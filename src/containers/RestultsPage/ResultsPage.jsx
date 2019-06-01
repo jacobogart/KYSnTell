@@ -6,7 +6,7 @@ export class ResultsPage extends Component {
   render() {
     const { locations } = this.props;
     const results = locations.length
-      ? locations.map(location => <ResultCard {...location} />)
+      ? locations.map(location => <ResultCard key={location.id} {...location} />)
       : <img src="https://i.redd.it/o6m7b0l6h6pz.gif" alt="Loading Spinner" className="loading" />
     return (
       <div>
