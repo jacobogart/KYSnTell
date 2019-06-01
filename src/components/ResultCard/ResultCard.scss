@@ -2,11 +2,44 @@
   background-color: white;
   margin: 15px;
   border-radius: 10px;
-  padding: 5px 10px;
+  padding: 5px;
   text-decoration: none;
+  height: 100%;
+  width: 90vw;
+  article {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
+  
   
   h3,
   p {
     margin: 10px;
+  }
+}
+
+.card-info {
+  width: 82%;
+  color: black;
+}
+
+.distance-container {
+  padding: 5px;
+  text-align: center;
+  background: grey;
+  height: 100%;
+  width: 46px;
+  border-radius: 0 10px 10px 0;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: -5px;
+  top: -5px;
+
+  p {
+    height: 45px;
   }
 }
