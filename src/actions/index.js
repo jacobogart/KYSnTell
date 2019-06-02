@@ -7,3 +7,8 @@ export const setUserLocation = (location) => ({
   type: 'SET_USER_LOCATION',
   location
 })
+
+export const setContacts = (contacts) => ({
+  type: 'SET_CONTACTS',
+  contacts
+})
