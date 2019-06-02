@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Switch, Route } from 'react-router';
 import { Splash } from '../../components/Splash/Splash';
-import { TellHome } from '../TellHome/TellHome';
 import SearchPage from '../SearchPage/SearchPage';
 import ResultsPage from '../RestultsPage/ResultsPage';
 import LocationPage from '../LocationPage/LocationPage';
