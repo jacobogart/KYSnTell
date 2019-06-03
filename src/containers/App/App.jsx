@@ -6,14 +6,11 @@ import SearchPage from '../SearchPage/SearchPage';
 import ResultsPage from '../RestultsPage/ResultsPage';
 import LocationPage from '../LocationPage/LocationPage';
 import { Header } from '../../components/Header/Header';
-import { sendMessage } from '../../api/twilio/send_sms';
 import ContactPage from '../ContactPage/ContactPage';
 import DetailsPage from '../DetailsPage/DetailsPage';
+import PreviewPage from '../PreviewPage/PreviewPage';
 
 export class App extends Component {
-  // componentDidMount() {
-  //   sendMessage();
-  // }
   
   render() {
     return (
@@ -26,6 +23,7 @@ export class App extends Component {
           <Route path='/kys/locations/:id' component={LocationPage} />
           <Route exact path='/tell' component={ContactPage} />
           <Route exact path='/tell/details' component={DetailsPage} />
+          <Route exact path='/tell/preview' component={PreviewPage} />
         </Switch>
       </div>
     );

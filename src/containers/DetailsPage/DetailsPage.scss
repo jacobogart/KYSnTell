@@ -1,0 +1,41 @@
+.DetailsPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 78vh;
+  margin-top: 15vh;
+}
+
+label,
+p {
+  color: white;
+  font-size: 24px;
+  margin: 5px;
+}
+
+.details-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 60vh;
+  width: 90vw;
+
+  button,
+  .search-input {
+    background-color: white;
+    font-size: 20px;
+    padding: 8px;
+    display: block;
+    width: 90vw;
+    border-radius: 10px;
+  }
+
+  .notes {
+    width: 83vw;
+  }
+}
+
+.contact-list-details {
+  max-height: 150px;
+  overflow: scroll;
+}
