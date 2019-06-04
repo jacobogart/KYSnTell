@@ -28,6 +28,9 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "jest": {
+    "snapshotSerializers": ["enzyme-to-json/serializer"]
+  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -41,6 +44,9 @@
     ]
   },
   "devDependencies": {
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "enzyme-to-json": "^3.3.5",
     "express-pino-logger": "^4.0.0",
     "node-env-run": "^3.0.2",
     "nodemon": "^1.19.1",

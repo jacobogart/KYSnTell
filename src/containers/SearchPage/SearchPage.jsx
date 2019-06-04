@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import { fetchLocations } from '../../api/fetchLocations';
 import { fetchLatLong } from '../../api/fetchLatLong';
 import { setLocations, setUserLocation } from '../../actions';

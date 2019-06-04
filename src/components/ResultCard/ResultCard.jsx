@@ -6,16 +6,16 @@ export class ResultCard extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      distance: '18.2 miles'
+      distance: ''
     };
   }
   
-  // componentDidMount() {
-  //   const { user, point } = this.props
+  componentDidMount() {
+    const { user, point } = this.props
 
-  //   fetchDistance(user.location, point)
-  //     .then(distance => this.setState({ distance }))
-  // }
+    fetchDistance(user.location, point)
+      .then(distance => this.setState({ distance }))
+  }
     
   
   render() {

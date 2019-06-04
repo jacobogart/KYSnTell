@@ -7,6 +7,7 @@
 
 # utilities
 /src/api/utilities.js
+/src/mockData.js
 
 # testing
 /coverage
@@ -20,6 +21,7 @@
 .env.development.local
 .env.test.local
 .env.production.local
+.env
 
 npm-debug.log*
 yarn-debug.log*
