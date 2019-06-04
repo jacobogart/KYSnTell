@@ -113,3 +113,9 @@ export const cleanLocation = {
   telephone: '(615)-227-3000',
   point: { lat: '36.1678930', long: '-86.7547047' }
 }
+
+export const details = {
+  additionalNotes: "Test",
+  diagnosis: "Herpes",
+  timeFrame: "year"
+}
