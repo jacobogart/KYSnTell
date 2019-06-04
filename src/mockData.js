@@ -12,7 +12,6 @@ export const destination = {
 
 export const distance = '18.3 mi';
 
-
 export const distanceResult = {
   rows: [
     {
@@ -89,3 +88,19 @@ export const locationsResult = {
 export const cleanLocations = locations.map(location => locationCleaner(location))
 
 export const fetchLocationsURL = "https://cors-anywhere.herokuapp.com/https://locator.hiv.gov/data?lat=38.9119463&long=-94.4136213&distance=10"
+
+export const contact = '+18168682142';
+
+export const contacts = [contact, contact]
+
+export const message = 'Test message.'
+
+export const sendMessageOptions = {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({ to: contact, message })
+}
+
+export const resolvedMessages = [{ ok: true }, { ok: true }];
