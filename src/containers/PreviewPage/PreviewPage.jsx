@@ -33,11 +33,7 @@ class PreviewPage extends Component {
   }
 
   handleSubmit = () => {
-    const message = {
-      to: '+18168682142',
-      message: this.state.message
-    }
-    fetchSendMessage(message)
+    fetchSendMessage(this.props.contacts, this.state.message)
       .then(res => console.log(res))
   }
 
