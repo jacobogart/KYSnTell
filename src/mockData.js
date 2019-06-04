@@ -104,3 +104,12 @@ export const sendMessageOptions = {
 }
 
 export const resolvedMessages = [{ ok: true }, { ok: true }];
+
+export const cleanLocation = {
+  title: 'Neighborhood Health',
+  link: 'https://gettested.cdc.gov/gettested_redirect/21952',
+  id: '21952',
+  address: '617 S 8th St;Nashville, TN 37206-3819',
+  telephone: '(615)-227-3000',
+  point: { lat: '36.1678930', long: '-86.7547047' }
+}
