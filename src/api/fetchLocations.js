@@ -16,5 +16,4 @@ export const fetchLocations = (location, distance) => {
       }
     })
     .then(results => results.services[0].providers.map(location => locationCleaner(location)))
-    .catch(error => console.log(error))
 }
