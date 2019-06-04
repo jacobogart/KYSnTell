@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  font-family: 'Oswald', sans-serif;
+}
+
+.App {
+  background-color: #3f3f3f;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

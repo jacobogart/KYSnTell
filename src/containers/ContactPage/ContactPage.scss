@@ -1,0 +1,48 @@
+.ContactPage {
+  margin-top: 100px;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.contact-list-container {
+  background-color: grey;
+  width: 80vw;
+  height: 200px;
+  overflow: scroll;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 250px;
+  width: 80vw;
+}
+
+.contact-button,
+.contact-input {
+  background-color: white;
+  font-size: 30px;
+  padding: 8px;
+}
+
+.contact-list {
+  background-color: grey;
+  // list-style: none; 
+
+  li {
+    font-size: 19.5px;
+    margin: 5px 0;
+  }
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.error {
+  color: rgb(214, 73, 73)
+}

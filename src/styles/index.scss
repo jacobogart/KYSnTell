@@ -1,0 +1,12 @@
+// @import './node_modules/normalize-scss/sass/normalize';
+// @import './variables.scss';
+// @import './mixins.scss';
+@import '../containers/App/App.scss';
+@import '../components/Splash/Splash.scss';
+@import '../containers/SearchPage/SearchPage.scss';
+@import '../components/Header/Header.scss';
+@import '../containers/RestultsPage/ResultsPage.scss';
+@import '../components/ResultCard/ResultCard.scss';
+@import '../containers/ContactPage/ContactPage.scss';
+@import '../containers/DetailsPage/DetailsPage.scss';
+@import '../containers/PreviewPage/PreviewPage.scss';

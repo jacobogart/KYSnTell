@@ -1,0 +1,19 @@
+.Splash{
+  height: 80%;
+  width: 80%;
+  text-align: center;
+}
+
+.main-link,
+.splash-n {
+  color: white;
+  font-weight: 800;
+  font-size: 100px;
+  margin: 10px;
+}
+
+.main-link {
+  &:hover {
+    cursor: pointer;
+  }
+}

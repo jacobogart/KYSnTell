@@ -1,0 +1,31 @@
+.message-holder {
+  background-color: grey;
+  width: 85vw;
+  padding: 10px;
+
+  .message {
+    color: black;
+    font-size: 18px;
+  }
+
+  .edit-true {
+    background: white;
+  }
+}
+
+.PreviewPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 70vh;
+  margin-top: 15vh;
+
+  button {
+    background-color: white;
+    font-size: 20px;
+    padding: 8px;
+    display: block;
+    width: 90vw;
+    border-radius: 10px;
+  }
+}
