@@ -1,11 +1,13 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 export const ErrorPage = (props) => {
   return (
-    <div>
+    <div className="ErrorPage">
       <p>Failed to send to...</p>
       {props.contacts.map(contact => <p>{contact}</p>)}
+      <Link to='/tell'>Please try again.</Link>
     </div>
   )
 }
