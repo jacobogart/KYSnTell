@@ -9,7 +9,7 @@ describe('ResultsPage', () => {
   beforeEach(() => {
     wrapper = shallow(
       <ResultsPage 
-        locations={mock.cleanLocation}
+        locations={mock.cleanLocations}
         user={mock.user}
       />);
   });
