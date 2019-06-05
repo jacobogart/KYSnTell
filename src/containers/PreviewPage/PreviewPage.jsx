@@ -43,7 +43,8 @@ export class PreviewPage extends Component {
         if (res.every(res => res.ok)) {
           this.props.history.push('/tell/success')
         } else {
-          const failedContacts = res.filter(res => !res.ok && res.message)
+          const failedContacts = res.filter(res => !res.ok).map(res => res.contact);
+          console.log(failedContacts);
           this.props.setContacts(failedContacts);
           this.props.history.push('/tell/error')
         }
@@ -83,4 +84,4 @@ export const mapDispatchToProps = (dispatch) => ({
   setContacts: (contacts) => dispatch(setContacts(contacts))
 })
 
-export default connect(mapStateToProps)(PreviewPage);
+export default connect(mapStateToProps, mapDispatchToProps)(PreviewPage);

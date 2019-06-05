@@ -23,7 +23,7 @@ app.post('/api/messages', (req, res) => {
       res.send(JSON.stringify({ ok: true }));
     })
     .catch(err => {
-      res.send(JSON.stringify({ ok: false }));
+      res.send(JSON.stringify({ ok: false, contact: req.body.to }));
     });
 })
 
