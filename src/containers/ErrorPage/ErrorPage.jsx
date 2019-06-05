@@ -6,7 +6,7 @@ export const ErrorPage = (props) => {
   return (
     <div className="ErrorPage">
       <p>Failed to send to...</p>
-      {props.contacts.map(contact => <p>{contact}</p>)}
+      {props.contacts.map(contact => <p key={contact}>{contact}</p>)}
       <Link to='/tell'>Please try again.</Link>
     </div>
   )
