@@ -23,7 +23,7 @@ export class SearchPage extends Component {
     e.preventDefault();
     const { zipcode, distance } = this.state;
     this.props.history.push('/kys/locations');
-    fetchLatLong(zipcode)
+    return fetchLatLong(zipcode)
       .then(location => {
         this.props.setUserLocation(location);
         return fetchLocations(location, distance);

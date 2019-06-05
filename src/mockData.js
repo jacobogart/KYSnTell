@@ -123,3 +123,22 @@ export const details = {
 export const user = {
   location: origin
 }
+
+export const searchChangeEvent = {
+  target: {
+    name: 'zipcode',
+    value: '64081'
+  }
+}
+
+export const submitEvent = {
+  preventDefault: jest.fn()
+}
+
+export const history = {
+  push: jest.fn()
+}
+
+export const setUserLocation = jest.fn();
+
+export const setLocations = jest.fn();

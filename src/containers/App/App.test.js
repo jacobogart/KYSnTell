@@ -17,4 +17,5 @@ describe('App', () => {
     const defaultState = { zipcode: '', distance: '' }
     expect(wrapper.state()).toEqual(defaultState);
   });
+  
 });
