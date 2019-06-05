@@ -1,11 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { PreviewPage, mapStateToProps, mapDispatchToProps } from './PreviewPage';
-import * as mock from '../../mockData'
+import * as mock from '../../mockData';
 import { fetchSendMessage } from '../../api/fetchSendMessage';
 import { setContacts } from '../../actions';
 
-jest.mock('../../api/fetchSendMessage')
+jest.mock('../../api/fetchSendMessage');
 
 describe('PreviewPage', () => {
   let wrapper, instance;
@@ -151,7 +151,7 @@ describe('PreviewPage', () => {
     it('should return the correct pieces of state', () => {
       const { contacts, details, user } = mock;
       const mockState = { contacts, details, user };
-      const expected = { contacts, details }
+      const expected = { contacts, details };
       const result = mapStateToProps(mockState);
       expect(result).toEqual(expected);
     });
