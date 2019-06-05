@@ -91,6 +91,24 @@ exports[`App should match snapshot 1`] = `
       exact={true}
       path="/tell/preview"
     />
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/tell/success"
+    />
+    <Route
+      component={
+        Object {
+          "$$typeof": Symbol(react.memo),
+          "WrappedComponent": [Function],
+          "compare": null,
+          "displayName": "Connect(ErrorPage)",
+          "type": [Function],
+        }
+      }
+      exact={true}
+      path="/tell/error"
+    />
   </Switch>
   <Footer />
 </div>
