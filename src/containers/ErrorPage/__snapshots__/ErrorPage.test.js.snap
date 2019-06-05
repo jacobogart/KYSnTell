@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorPage should match snapshot 1`] = `
+<div
+  className="ErrorPage"
+>
+  <p>
+    Failed to send to...
+  </p>
+  <p
+    key="+18168682142"
+  >
+    +18168682142
+  </p>
+  <p
+    key="+18168682142"
+  >
+    +18168682142
+  </p>
+  <Link
+    to="/tell"
+  >
+    Please try again.
+  </Link>
+</div>
+`;

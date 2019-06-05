@@ -11,7 +11,7 @@ export const fetchSendMessage = (contacts, message) => {
     return fetch('/api/messages', options)
       .then(response => {
         if (!response.ok) {
-          throw Error('Failed to send message')
+          throw Error(`${contact}`)
         } else {
           return response.json();
         }

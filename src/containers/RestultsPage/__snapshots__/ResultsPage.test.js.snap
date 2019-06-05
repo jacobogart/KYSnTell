@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResultsPage should match snapshot 1`] = `
+<div
+  className="ResultsPage"
+>
+  <ResultCard
+    address="617 S 8th St;Nashville, TN 37206-3819"
+    id="21952"
+    key="21952"
+    link="https://gettested.cdc.gov/gettested_redirect/21952"
+    point={
+      Object {
+        "lat": "36.1678930",
+        "lng": "-86.7547047",
+      }
+    }
+    telephone="(615)-227-3000"
+    title="Neighborhood Health"
+    user={
+      Object {
+        "location": Object {
+          "lat": 38.9119463,
+          "lng": -94.4136213,
+        },
+      }
+    }
+  />
+  <ResultCard
+    address="520 Sylvan St;Nashville, TN 37206"
+    id="110792"
+    key="110792"
+    link="https://gettested.cdc.gov/gettested_redirect/110792"
+    point={
+      Object {
+        "lat": "36.1665114",
+        "lng": "-86.7605114",
+      }
+    }
+    telephone="(615)-259-7676"
+    title="Street Works"
+    user={
+      Object {
+        "location": Object {
+          "lat": 38.9119463,
+          "lng": -94.4136213,
+        },
+      }
+    }
+  />
+</div>
+`;

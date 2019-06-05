@@ -1,10 +1,15 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Splash } from './Splash';
+import  App  from './App';
 
-describe('Splash', () => {
+describe('App', () => {
+  let wrapper;
+
+  beforeEach(() => {
+    wrapper = shallow(<App />);
+  })
   it('should match snapshot', () => {
-    const wrapper = shallow(<Splash />)
     expect(wrapper).toMatchSnapshot();
   });
+  
 });

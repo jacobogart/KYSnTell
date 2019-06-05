@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should match snapshot 1`] = `
+<div
+  className="App"
+>
+  <Route
+    component={[Function]}
+    path="/"
+  />
+  <Switch>
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/"
+    />
+    <Route
+      component={
+        Object {
+          "$$typeof": Symbol(react.memo),
+          "WrappedComponent": [Function],
+          "compare": null,
+          "displayName": "Connect(SearchPage)",
+          "type": [Function],
+        }
+      }
+      exact={true}
+      path="/kys"
+    />
+    <Route
+      component={
+        Object {
+          "$$typeof": Symbol(react.memo),
+          "WrappedComponent": [Function],
+          "compare": null,
+          "displayName": "Connect(ResultsPage)",
+          "type": [Function],
+        }
+      }
+      exact={true}
+      path="/kys/locations"
+    />
+    <Route
+      component={
+        Object {
+          "$$typeof": Symbol(react.memo),
+          "WrappedComponent": [Function],
+          "compare": null,
+          "displayName": "Connect(LocationPage)",
+          "type": [Function],
+        }
+      }
+      path="/kys/locations/:id"
+    />
+    <Route
+      component={
+        Object {
+          "$$typeof": Symbol(react.memo),
+          "WrappedComponent": [Function],
+          "compare": null,
+          "displayName": "Connect(ContactPage)",
+          "type": [Function],
+        }
+      }
+      exact={true}
+      path="/tell"
+    />
+    <Route
+      component={
+        Object {
+          "$$typeof": Symbol(react.memo),
+          "WrappedComponent": [Function],
+          "compare": null,
+          "displayName": "Connect(DetailsPage)",
+          "type": [Function],
+        }
+      }
+      exact={true}
+      path="/tell/details"
+    />
+    <Route
+      component={
+        Object {
+          "$$typeof": Symbol(react.memo),
+          "WrappedComponent": [Function],
+          "compare": null,
+          "displayName": "Connect(PreviewPage)",
+          "type": [Function],
+        }
+      }
+      exact={true}
+      path="/tell/preview"
+    />
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/tell/success"
+    />
+    <Route
+      component={
+        Object {
+          "$$typeof": Symbol(react.memo),
+          "WrappedComponent": [Function],
+          "compare": null,
+          "displayName": "Connect(ErrorPage)",
+          "type": [Function],
+        }
+      }
+      exact={true}
+      path="/tell/error"
+    />
+  </Switch>
+  <Footer />
+</div>
+`;

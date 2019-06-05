@@ -6,12 +6,14 @@ import { setLocations, setUserLocation } from '../../actions';
 
 
 
-class SearchPage extends Component {
+export class SearchPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
       zipcode: '',
-      distance: ''
+      distance: '',
+      isLoading: false,
+      error: false
     };
   }
   
@@ -22,27 +24,38 @@ class SearchPage extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const { zipcode, distance } = this.state;
-    this.props.history.push('/kys/locations');
-    fetchLatLong(zipcode)
+    this.setState({ isLoading: true, error: false })
+    return fetchLatLong(zipcode)
       .then(location => {
         this.props.setUserLocation(location);
         return fetchLocations(location, distance);
       })
-      .then(results => this.props.setLocations(results))
+      .then(results => {
+        this.setState({ isLoading: false })
+        if (results.length) {
+          this.props.setLocations(results)
+          this.props.history.push('/kys/locations');
+        } else {
+          this.setState({ error: true })
+        }
+      })
   }
 
   render() {
-    return (
-      <form className="SearchPage" onSubmit={this.handleSubmit}>
-        <input 
-          type="text" 
-          name="zipcode" 
-          placeholder="Zipcode..."
-          className="search-input" 
-          onChange={this.handleChange}
-        />
-        <select 
-          name="distance" 
+    const { isLoading, error } = this.state; 
+    const form = <form className="SearchPage" onSubmit={this.handleSubmit}>
+      <input
+        type="text"
+        name="zipcode"
+        placeholder="Zipcode..."
+        className="search-input"
+        value={this.state.zipcode}
+        onChange={this.handleChange}
+      />
+      <div className='distance-holder'>
+        {error && <p className='search-error'>No locations found, please increase range</p>}
+        <select
+          name="distance"
           onChange={this.handleChange}
           className="search-input"
         >
@@ -52,10 +65,21 @@ class SearchPage extends Component {
           <option value="40">40 miles</option>
           <option value="50">50 miles</option>
         </select>
-        <button type="submit" >
-          Use zipcode
+
+      </div>
+      <button type="submit" >
+        Use zipcode
         </button>
-      </form>
+    </form>
+
+    const loading = <div className="spinner-container">
+      <img src="https://i.redd.it/o6m7b0l6h6pz.gif" alt="Loading Spinner" className="loading" />
+    </div>
+
+    return (
+      <div>
+        {isLoading ? loading : form}
+      </div>
     );
   }
 }

@@ -23,11 +23,8 @@ app.post('/api/messages', (req, res) => {
       res.send(JSON.stringify({ ok: true }));
     })
     .catch(err => {
-      console.log(err);
-      res.send(JSON.stringify({ ok: false }));
+      res.send(JSON.stringify({ ok: false, contact: req.body.to }));
     });
 })
 
-app.listen(3001, () =>
-  console.log('Express server is running on localhost:3001')
-);
+module.exports =  app;

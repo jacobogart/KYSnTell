@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PreviewPage should match snapshot 1`] = `
+<div
+  className="PreviewPage"
+>
+  <div
+    className="message-holder"
+  >
+    <p
+      className="message edit-false"
+      contentEditable={false}
+      tabIndex="0"
+    >
+      Hello, we have been informed by an anonymous sexual partner that you may have been exposed to Herpes in the last year. While this is no cause for alarm, we do recommend getting tested at your earliest convenience. To find a testing center near you, please visit kysntell.com, or contact your preferred healthcare provider. Additional notes from partner: Test
+    </p>
+  </div>
+  <button
+    className="edit-btn"
+    onClick={[Function]}
+  >
+    Edit Message
+  </button>
+  <button
+    className="send-btn"
+    onClick={[Function]}
+  >
+    Send Message
+  </button>
+</div>
+`;

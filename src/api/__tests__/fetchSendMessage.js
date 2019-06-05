@@ -12,7 +12,7 @@ describe('fetchSendMessage', () => {
     expect(fetch).toHaveBeenCalledWith('/api/messages', mock.sendMessageOptions)
   });
 
-  it('should return an array of locations', async () => {
+  it('should return an array of resolved messages', async () => {
     const result = await fetchSendMessage(mock.contacts, mock.message);
     expect(result).toEqual(mock.resolvedMessages);
   });
@@ -25,7 +25,7 @@ describe('fetchSendMessage', () => {
     try {
       await fetchSendMessage(mock.contacts, mock.message)
     } catch (error) {
-      expect(error.message).toEqual("Failed to send message")
+      expect(error.message).toEqual(mock.contact)
     }
   });
 });
