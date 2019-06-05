@@ -7,7 +7,7 @@ export const origin = {
 
 export const destination = { 
   lat: "39.1952922", 
-  long: "-94.6817269" 
+  lng: "-94.6817269" 
 }
 
 export const distance = '18.3 mi';
@@ -111,7 +111,7 @@ export const cleanLocation = {
   id: '21952',
   address: '617 S 8th St;Nashville, TN 37206-3819',
   telephone: '(615)-227-3000',
-  point: { lat: '36.1678930', long: '-86.7547047' }
+  point: { lat: '36.1678930', lng: '-86.7547047' }
 }
 
 export const details = {
