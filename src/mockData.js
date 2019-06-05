@@ -119,3 +119,7 @@ export const details = {
   diagnosis: "Herpes",
   timeFrame: "year"
 }
+
+export const user = {
+  location: origin
+}

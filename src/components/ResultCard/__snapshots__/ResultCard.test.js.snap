@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResultCard should match snapshot 1`] = `
+<Link
+  className="ResultCard"
+  to="/kys/locations/21952"
+>
+  <article>
+    <div
+      className="card-info"
+    >
+      <h3>
+        Neighborhood Health
+      </h3>
+      <p>
+        617 S 8th St
+         
+        <br />
+         
+        Nashville, TN 37206-3819
+      </p>
+    </div>
+    <div
+      className="distance-container"
+    >
+      <p>
+        18.3 mi
+      </p>
+    </div>
+  </article>
+</Link>
+`;
