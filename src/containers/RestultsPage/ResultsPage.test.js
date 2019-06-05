@@ -1,20 +1,29 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { ResultsPage } from './ResultsPage';
+import { ResultsPage, mapStateToProps } from './ResultsPage';
 import * as mock from '../../mockData'
 
 describe('ResultsPage', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<ResultsPage />);
-  })
+    wrapper = shallow(
+      <ResultsPage 
+        locations={mock.cleanLocation}
+        user={mock.user}
+      />);
+  });
+
   it('should match snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should have default state', () => {
-    const defaultState = { zipcode: '', distance: '' }
-    expect(wrapper.state()).toEqual(defaultState);
+  describe('mapStateToProps', () => {
+    it('should return the appropriate pieces of state', () => {
+      const expected = { locations: mock.cleanLocation, user: mock.user };
+      const defaultState = { ...expected, test: 'test' }
+      const result = mapStateToProps(defaultState);
+      expect(result).toEqual(expected);
+    });
   });
 });
