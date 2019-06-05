@@ -37,18 +37,21 @@ export class PreviewPage extends Component {
     this.setState({ contEdit: !contEdit });
   }
 
-  handleSubmit = () => {
-    fetchSendMessage(this.props.contacts, this.state.message)
+  handleSend = () => {
+    return fetchSendMessage(this.props.contacts, this.state.message)
       .then(res => {
         if (res.every(res => res.ok)) {
           this.props.history.push('/tell/success')
         } else {
-          const failedContacts = res.filter(res => !res.ok).map(res => res.contact);
-          console.log(failedContacts);
-          this.props.setContacts(failedContacts);
-          this.props.history.push('/tell/error')
+          this.handleError(res);
         }
       })
+  }
+
+  handleError = (res) => {
+    const failedContacts = res.filter(res => !res.ok).map(res => res.contact);
+    this.props.setContacts(failedContacts);
+    this.props.history.push('/tell/error');
   }
 
   render() {
@@ -68,8 +71,8 @@ export class PreviewPage extends Component {
             {message}
           </p>
         </div>
-        <button onClick={this.toggleEdit}>{buttonText}</button>
-        <button onClick={this.handleSubmit}>Send Message</button>
+        <button className ='edit-btn' onClick={this.toggleEdit}>{buttonText}</button>
+        <button className='send-btn' onClick={this.handleSend}>Send Message</button>
       </div>
     );
   }

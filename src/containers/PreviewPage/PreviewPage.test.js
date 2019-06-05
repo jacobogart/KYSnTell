@@ -1,18 +1,25 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { PreviewPage } from './PreviewPage';
+import { PreviewPage, mapStateToProps, mapDispatchToProps } from './PreviewPage';
 import * as mock from '../../mockData'
+import { fetchSendMessage } from '../../api/fetchSendMessage';
+import { setContacts } from '../../actions';
+
+jest.mock('../../api/fetchSendMessage')
 
 describe('PreviewPage', () => {
   let wrapper, instance;
-  const message = React.createRef();
+
+  fetchSendMessage.mockImplementation(() => Promise.resolve(mock.resolvedMessages))
 
   beforeEach(() => {
     wrapper = shallow(
       <PreviewPage 
         details={mock.details}
         contacts={mock.contacts}
-      />, { context: message });
+        history={mock.history}
+        setContacts={mock.setContacts}
+      />);
     instance = wrapper.instance();
     instance.message.current = mock.messageContext;
   });
@@ -39,6 +46,19 @@ describe('PreviewPage', () => {
     jest.spyOn(instance, 'setMessage');
     instance.componentDidMount();
     expect(instance.setMessage).toHaveBeenCalled();
+  });
+
+  describe('Event Listeners', () => {
+    it('should invoke toggleEdit when edit-btn is clicked', () => {
+      expect(wrapper.state('contEdit')).toEqual(false);
+      wrapper.find('.edit-btn').simulate('click', mock.previewEvent);
+      expect(wrapper.state('contEdit')).toEqual(true);
+    });
+
+    it('should invoke handleSend when send-btn is clicked', () => {
+      wrapper.find('.send-btn').simulate('click');
+      expect(fetchSendMessage).toHaveBeenCalled();
+    });
   });
 
   describe('setMessage', () => {
@@ -87,5 +107,54 @@ describe('PreviewPage', () => {
       instance.toggleEdit(mock.previewEvent);
       expect(wrapper.state('contEdit')).toEqual(false);
     });
+  });
+
+  describe('handleSend', () => {
+    it('should call fetchSendMessage', () => {
+      instance.handleSend();
+      expect(fetchSendMessage).toHaveBeenCalledWith(mock.contacts, mock.fullMessage);
+    });
+
+    it('should push the router if all responses are ok', async () => {
+      await instance.handleSend();
+      expect(mock.history.push).toHaveBeenCalledWith('/tell/success');
+    });
+
+    it('should invoke handleError is there are any failed fetches', async () => {
+      fetchSendMessage.mockImplementation(() => Promise.resolve([...mock.resolvedMessages, { ok: false, contact: mock.contact}]));
+      jest.spyOn(instance, 'handleError');
+      await instance.handleSend();
+      expect(instance.handleError).toHaveBeenCalled();
+    });
+  });
+
+  describe('handleError', () => {
+    it('should invoke setContacts', () => {
+      instance.handleError(mock.rejectedMessages);
+      expect(mock.setContacts).toHaveBeenCalledWith([mock.contact])
+    });
+
+    it('should push the router to the error page', () => {
+      instance.handleError(mock.rejectedMessages);
+      expect(mock.history.push).toHaveBeenCalledWith('/tell/error');
+    });
+  });
+
+  describe('mapStateToProps', () => {
+    it('should return the correct pieces of state', () => {
+      const { contacts, details, user } = mock;
+      const mockState = { contacts, details, user };
+      const expected = { contacts, details }
+      const result = mapStateToProps(mockState);
+      expect(result).toEqual(expected);
+    });
+  });
+
+  describe('mockDispatchToProps', () => {
+    const mockDispatch = jest.fn();
+    const mappedProps = mapDispatchToProps(mockDispatch);
+    const actionToDispatch = setContacts(mock.contacts);
+    mappedProps.setContacts(mock.contacts);
+    expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
   });
 });

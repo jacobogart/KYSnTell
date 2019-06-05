@@ -16,11 +16,13 @@ exports[`PreviewPage should match snapshot 1`] = `
     </p>
   </div>
   <button
+    className="edit-btn"
     onClick={[Function]}
   >
     Edit Message
   </button>
   <button
+    className="send-btn"
     onClick={[Function]}
   >
     Send Message
