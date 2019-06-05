@@ -6,7 +6,7 @@ import { setLocations, setUserLocation } from '../../actions';
 
 
 
-class SearchPage extends Component {
+export class SearchPage extends Component {
   constructor(props) {
     super(props);
     this.state = {

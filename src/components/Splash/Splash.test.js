@@ -7,4 +7,4 @@ describe('Splash', () => {
     const wrapper = shallow(<Splash />)
     expect(wrapper).toMatchSnapshot();
   });
-})
+});

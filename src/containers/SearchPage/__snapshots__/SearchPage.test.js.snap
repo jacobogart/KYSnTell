@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchPage should match snapshot 1`] = `
+<form
+  className="SearchPage"
+  onSubmit={[Function]}
+>
+  <input
+    className="search-input"
+    name="zipcode"
+    onChange={[Function]}
+    placeholder="Zipcode..."
+    type="text"
+  />
+  <select
+    className="search-input"
+    name="distance"
+    onChange={[Function]}
+  >
+    <option
+      value="10"
+    >
+      10 miles
+    </option>
+    <option
+      value="20"
+    >
+      20 miles
+    </option>
+    <option
+      value="30"
+    >
+      30 miles
+    </option>
+    <option
+      value="40"
+    >
+      40 miles
+    </option>
+    <option
+      value="50"
+    >
+      50 miles
+    </option>
+  </select>
+  <button
+    type="submit"
+  >
+    Use zipcode
+  </button>
+</form>
+`;
