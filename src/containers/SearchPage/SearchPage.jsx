@@ -43,11 +43,12 @@ export class SearchPage extends Component {
 
   render() {
     const { isLoading, error } = this.state; 
-    const form = <form className="SearchPage" onSubmit={this.handleSubmit}>
+    const form = <form className="search-form" onSubmit={this.handleSubmit}>
+      <p className='search-msg'>Search for HIV/STD tesing centers near you</p>
       <input
         type="text"
         name="zipcode"
-        placeholder="Zipcode..."
+        placeholder="Enter zipcode..."
         className="search-input"
         value={this.state.zipcode}
         onChange={this.handleChange}
@@ -59,6 +60,7 @@ export class SearchPage extends Component {
           onChange={this.handleChange}
           className="search-input"
         >
+          <option value="" disabled selected>Select distance...</option>
           <option value="10">10 miles</option>
           <option value="20">20 miles</option>
           <option value="30">30 miles</option>
@@ -67,9 +69,7 @@ export class SearchPage extends Component {
         </select>
 
       </div>
-      <button type="submit" >
-        Use zipcode
-        </button>
+      <button type="submit">Search</button>
     </form>
 
     const loading = <div className="spinner-container">
@@ -77,7 +77,7 @@ export class SearchPage extends Component {
     </div>
 
     return (
-      <div>
+      <div className='SearchPage'>
         {isLoading ? loading : form}
       </div>
     );

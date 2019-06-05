@@ -8,7 +8,6 @@ export const LocationPage = (props) => {
 
   return (
     <article className='LocationPage'>
-      <Map point={point}/>
       <div className="location-info">
         <h3>{title}</h3>
         <p>{address.split(';')[0]} <br /> {address.split(';')[1]}</p>
@@ -17,6 +16,7 @@ export const LocationPage = (props) => {
           <a href={link}><i className="fas fa-globe"></i>Website</a>
         </div>
       </div>
+      <Map point={point} />
     </article>
   );
 }

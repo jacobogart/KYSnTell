@@ -37,11 +37,6 @@ export class ContactPage extends Component {
       return <li key={contact}>{`(${a}${b}${c}) ${d}${e}${f}-${g}${h}${i}${j}`}</li>})
     return (
       <div className="ContactPage">
-        <div className="contact-list-container">
-          <ol className="contact-list">
-            {contactList}
-          </ol>
-        </div>
         <form 
           onSubmit={this.handleSubmit} 
           className="contact-form"
@@ -54,10 +49,16 @@ export class ContactPage extends Component {
             onChange={this.handleChange}
           />
           {this.state.error &&
-          <p className="error">Please enter a valid 10-digit phone number please.</p>}
+          <p className="error">Please enter a valid 10-digit phone number.</p>}
           <button type="submit" className="contact-button">
             Add Contact
           </button>
+          <div className="contact-list-container">
+            <ol className="contact-list">
+              {contactList.length ? contactList
+                : <p>Please add a phone number</p>}
+            </ol>
+          </div>
           <button className="contact-button" onClick={this.storeContacts}>
             Next Page
         </button>

@@ -2,8 +2,22 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 60vh;
-  margin-top: 80px;
+  align-items: center;
+
+  .search-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 60vh;
+    width: 85%;
+  }
+  
+
+  .search-msg{
+    margin: 0 auto;
+    width: 90%;
+    text-align: center;
+  }
 
   button,
   .search-input {

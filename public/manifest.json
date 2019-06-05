@@ -1,9 +1,9 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Kys n' Tell",
+  "name": "Kys n' Tell",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "https://cdn.shopify.com/s/files/1/1061/1924/products/Kiss_Mark_Emoji_large.png?v=1480481040",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     }

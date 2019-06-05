@@ -33,7 +33,7 @@ export class DetailsPage extends Component {
       <ol className="contact-list-details contact-list">
         {contactList}
       </ol>
-    const stds = ['Select', 'HIV/AIDS', 'HPV(Human Papillomavirus)', 'Chlamydia', 'Gonorrhea', 'Syphilis', 'Herpes', 'Trichomoniasis'];
+    const stds = ['HIV/AIDS', 'HPV(Human Papillomavirus)', 'Chlamydia', 'Gonorrhea', 'Syphilis', 'Herpes', 'Trichomoniasis'];
     const stdOptions = stds.map(std => <option key={std} value={std}>{std}</option>)
     return (
       <div className="DetailsPage">
@@ -48,6 +48,7 @@ export class DetailsPage extends Component {
               onChange={this.handleChange}
               className="search-input"
             >
+              <option value="" disabled selected>Select</option>
               {stdOptions}
             </select>
           </div>
@@ -59,7 +60,7 @@ export class DetailsPage extends Component {
               onChange={this.handleChange}
               className="search-input"
             >
-              <option value="">Select</option>
+              <option value="" disabled selected>Select</option>
               <option value="month">one month</option>
               <option value="two months">two months</option>
               <option value="three months">three months</option>
