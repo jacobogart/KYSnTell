@@ -11,4 +11,16 @@
     font-size: 30px;
     padding: 8px;
   }
+
+  .distance-holder {
+
+    .search-error {
+      font-size: 20px;
+      color: red;
+    }
+
+    .search-input {
+      width: 100%;
+    }
+  }
 }

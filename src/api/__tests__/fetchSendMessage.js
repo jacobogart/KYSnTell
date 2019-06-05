@@ -25,7 +25,7 @@ describe('fetchSendMessage', () => {
     try {
       await fetchSendMessage(mock.contacts, mock.message)
     } catch (error) {
-      expect(error.message).toEqual("Failed to send message")
+      expect(error.message).toEqual(mock.contact)
     }
   });
 });

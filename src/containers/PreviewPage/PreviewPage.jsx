@@ -46,11 +46,14 @@ export class PreviewPage extends Component {
           this.handleError(res);
         }
       })
+      .catch(error => this.handleError())
   }
 
   handleError = (res) => {
-    const failedContacts = res.filter(res => !res.ok).map(res => res.contact);
-    this.props.setContacts(failedContacts);
+    if (res) {
+      const failedContacts = res.filter(res => !res.ok).map(res => res.contact);
+      this.props.setContacts(failedContacts);
+    }
     this.props.history.push('/tell/error');
   }
 

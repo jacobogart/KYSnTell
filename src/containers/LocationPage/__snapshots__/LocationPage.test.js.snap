@@ -32,7 +32,7 @@ exports[`LocationPage should match snapshot 1`] = `
         href="tel:(615)-227-3000"
       >
         <i
-          class="fas fa-phone"
+          className="fas fa-phone"
         />
         (615)-227-3000
       </a>
