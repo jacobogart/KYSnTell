@@ -1,6 +1,7 @@
-import { googleKey, geocodeUrl } from "./utilities";
+import { geocodeUrl } from "./utilities";
 
 export const fetchLatLong = (zip) => {
+  const googleKey = process.env.REACT_APP_GOOGLE_KEY;
   return fetch(`${geocodeUrl}${zip}&key=${googleKey}`)
     .then(response => {
       if(!response.ok) {
