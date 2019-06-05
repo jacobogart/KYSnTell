@@ -10,6 +10,7 @@ import ContactPage from '../ContactPage/ContactPage';
 import DetailsPage from '../DetailsPage/DetailsPage';
 import PreviewPage from '../PreviewPage/PreviewPage';
 import { Footer } from '../../components/Footer/Footer';
+import { SuccessPage } from '../../components/SuccessPage/SuccessPage';
 
 export class App extends Component {
   
@@ -25,6 +26,8 @@ export class App extends Component {
           <Route exact path='/tell' component={ContactPage} />
           <Route exact path='/tell/details' component={DetailsPage} />
           <Route exact path='/tell/preview' component={PreviewPage} />
+          <Route exact path='/tell/success' component={SuccessPage} />
+          <Route exact path='/tell/error' component={SuccessPage} />
         </Switch>
         <Footer />
       </div>

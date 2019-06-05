@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchSendMessage } from '../../api/fetchSendMessage'
+import { setContacts } from '../../actions';
 
 
-class PreviewPage extends Component {
+export class PreviewPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -14,9 +15,13 @@ class PreviewPage extends Component {
   }
 
   componentDidMount() {
+    this.setMessage();
+  }
+
+  setMessage = () => {
     const { diagnosis, timeFrame, additionalNotes } = this.props.details;
     let message = `Hello, we have been informed by an anonymous sexual partner that you may have been exposed to ${diagnosis} in the last ${timeFrame}. While this is no cause for alarm, we do recommend getting tested at your earliest convenience. To find a testing center near you, please visit kysntell.com, or contact your preferred healthcare provider.`
-    if (additionalNotes) { message = message.concat(' ', `Additional notes from partner: ${additionalNotes}`)}
+    if (additionalNotes) { message = message.concat(' ', `Additional notes from partner: ${additionalNotes}`) }
     this.setState({ message });
   }
   
@@ -34,7 +39,15 @@ class PreviewPage extends Component {
 
   handleSubmit = () => {
     fetchSendMessage(this.props.contacts, this.state.message)
-      .then(res => console.log(res))
+      .then(res => {
+        if (res.every(res => res.ok)) {
+          this.props.history.push('/tell/success')
+        } else {
+          const failedContacts = res.filter(res => !res.ok && res.message)
+          this.props.setContacts(failedContacts);
+          this.props.history.push('/tell/error')
+        }
+      })
   }
 
   render() {
@@ -64,6 +77,10 @@ class PreviewPage extends Component {
 export const mapStateToProps = (state) => ({
   contacts: state.contacts,
   details: state.details
+});
+
+export const mapDispatchToProps = (dispatch) => ({
+  setContacts: (contacts) => dispatch(setContacts(contacts))
 })
 
 export default connect(mapStateToProps)(PreviewPage);

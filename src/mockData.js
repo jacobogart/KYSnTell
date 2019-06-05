@@ -142,3 +142,19 @@ export const history = {
 export const setUserLocation = jest.fn();
 
 export const setLocations = jest.fn();
+
+export const fullMessage = 'Hello, we have been informed by an anonymous sexual partner that you may have been exposed to Herpes in the last year. While this is no cause for alarm, we do recommend getting tested at your earliest convenience. To find a testing center near you, please visit kysntell.com, or contact your preferred healthcare provider. Additional notes from partner: Test'
+
+export const messageWONotes = "Hello, we have been informed by an anonymous sexual partner that you may have been exposed to Herpes in the last year. While this is no cause for alarm, we do recommend getting tested at your earliest convenience. To find a testing center near you, please visit kysntell.com, or contact your preferred healthcare provider."
+
+export const previewEvent = {
+  target: {
+    blur: jest.fn()
+  }
+}
+
+export const messageContext = {
+  focus: jest.fn(),
+  blur: jest.fn(),
+  innerText: 'Test'
+}
