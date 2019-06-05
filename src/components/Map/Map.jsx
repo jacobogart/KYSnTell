@@ -13,7 +13,7 @@ export class Map extends Component {
     return (
       <figure className="Map">
         <GoogleMapReact
-          bootstrapURLKeys={{ key: process.env.GOOGLE_KEY }}
+          bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_KEY }}
           defaultCenter={center}
           defaultZoom={15}
         >
