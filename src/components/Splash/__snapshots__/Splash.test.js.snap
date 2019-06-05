@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Splash should match snapshot 1`] = `
+<div
+  className="Splash"
+>
+  <h4>
+    Know you status
+  </h4>
+  <Link
+    className="main-link"
+    to="/kys"
+  >
+    KYS
+  </Link>
+  <h2
+    className="splash-n"
+  >
+    n'
+  </h2>
+  <Link
+    className="main-link"
+    to="/tell"
+  >
+    Tell
+  </Link>
+  <h4>
+    Tell your partners
+  </h4>
+</div>
+`;
