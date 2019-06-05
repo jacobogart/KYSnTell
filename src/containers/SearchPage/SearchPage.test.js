@@ -25,19 +25,24 @@ describe('SearchPage', () => {
         setLocations={mock.setLocations}
       />);
     instance = wrapper.instance();
-  })
+  });
+
   it('should match snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should match snapshot when loading is true', () => {
+    instance.setState({ isLoading: true })
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should have default state', () => {
-    const defaultState = { zipcode: '', distance: '' }
-    expect(wrapper.state()).toEqual(defaultState);
+    expect(wrapper.state()).toEqual(mock.searchDefaultState);
   });
 
   describe('Event Listeners', () => {
     it('should invoke handleSubmit when the form submits', () => {
-      wrapper.simulate('submit', mock.submitEvent);
+      wrapper.find('.SearchPage').simulate('submit', mock.submitEvent);
       expect(mock.submitEvent.preventDefault).toHaveBeenCalled();
     });
 
@@ -56,9 +61,11 @@ describe('SearchPage', () => {
   });
 
   describe('handleSubmit', () => {
-    it('should push to the correct route', () => {
+    it('should set isLoading and error pieces of state', () => {
+      instance.setState({ isLoading: false, error: true });
       instance.handleSubmit(mock.submitEvent);
-      expect(mock.history.push).toHaveBeenCalledWith('/kys/locations');
+      expect(wrapper.state('isLoading')).toEqual(true);
+      expect(wrapper.state('error')).toEqual(false);
     });
 
     it('should call fetchLatLong with the correct params', () => {
@@ -78,9 +85,25 @@ describe('SearchPage', () => {
       expect(fetchLocations).toHaveBeenCalledWith(mock.origin, '2');
     });
 
-    it('should invoke the setLocations dispatch', async () => {
+    it('should set isLoading to false', async () => {
+      await instance.handleSubmit(mock.submitEvent);
+      expect(wrapper.state('isLoading')).toEqual(false);
+    });
+
+    it('should invoke the setLocations dispatch if there are results', async () => {
       await instance.handleSubmit(mock.submitEvent);
       expect(mock.setLocations).toHaveBeenCalledWith(mock.cleanLocations);
+    });
+
+    it('should push to the correct route if there are results', () => {
+      instance.handleSubmit(mock.submitEvent);
+      expect(mock.history.push).toHaveBeenCalledWith('/kys/locations');
+    });
+
+    it('should set error to true if there are no results', async () => {
+      fetchLocations.mockImplementation(() => Promise.resolve([]));
+      await instance.handleSubmit(mock.submitEvent);
+      expect(wrapper.state('error')).toEqual(true);
     });
   });
 

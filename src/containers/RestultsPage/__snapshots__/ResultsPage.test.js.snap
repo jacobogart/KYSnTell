@@ -1,17 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ResultsPage should match snapshot 1`] = `
-<div
-  className="ResultsPage"
->
-  <div
-    className="spinner-container"
-  >
-    <img
-      alt="Loading Spinner"
-      className="loading"
-      src="https://i.redd.it/o6m7b0l6h6pz.gif"
-    />
-  </div>
-</div>
-`;
+exports[`ResultsPage should match snapshot 1`] = `undefined`;

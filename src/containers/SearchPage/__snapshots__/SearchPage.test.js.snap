@@ -1,52 +1,73 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SearchPage should match snapshot 1`] = `
-<form
-  className="SearchPage"
-  onSubmit={[Function]}
->
-  <input
-    className="search-input"
-    name="zipcode"
-    onChange={[Function]}
-    placeholder="Zipcode..."
-    type="text"
-  />
-  <select
-    className="search-input"
-    name="distance"
-    onChange={[Function]}
+<div>
+  <form
+    className="SearchPage"
+    onSubmit={[Function]}
   >
-    <option
-      value="10"
+    <input
+      className="search-input"
+      name="zipcode"
+      onChange={[Function]}
+      placeholder="Zipcode..."
+      type="text"
+      value=""
+    />
+    <div
+      className="distance-holder"
     >
-      10 miles
-    </option>
-    <option
-      value="20"
+      <select
+        className="search-input"
+        name="distance"
+        onChange={[Function]}
+      >
+        <option
+          value="10"
+        >
+          10 miles
+        </option>
+        <option
+          value="20"
+        >
+          20 miles
+        </option>
+        <option
+          value="30"
+        >
+          30 miles
+        </option>
+        <option
+          value="40"
+        >
+          40 miles
+        </option>
+        <option
+          value="50"
+        >
+          50 miles
+        </option>
+      </select>
+    </div>
+    <button
+      type="submit"
     >
-      20 miles
-    </option>
-    <option
-      value="30"
-    >
-      30 miles
-    </option>
-    <option
-      value="40"
-    >
-      40 miles
-    </option>
-    <option
-      value="50"
-    >
-      50 miles
-    </option>
-  </select>
-  <button
-    type="submit"
+      Use zipcode
+    </button>
+  </form>
+</div>
+`;
+
+exports[`SearchPage should match snapshot when loading is true 1`] = `
+<div>
+  <div
+    className="spinner-container"
   >
-    Use zipcode
-  </button>
-</form>
+    <img
+      alt="Loading Spinner"
+      className="loading"
+      src="https://i.redd.it/o6m7b0l6h6pz.gif"
+    />
+  </div>
+</div>
 `;

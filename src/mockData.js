@@ -187,3 +187,10 @@ export const contactBadChangeEvent = {
     value: 'test'
   }
 }
+
+export const searchDefaultState = {
+  zipcode: '',
+  distance: '',
+  isLoading: false,
+  error: false
+}

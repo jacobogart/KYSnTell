@@ -31,12 +31,12 @@ export class SearchPage extends Component {
         return fetchLocations(location, distance);
       })
       .then(results => {
+        this.setState({ isLoading: false })
         if (results.length) {
-          this.setState({ isLoading: false })
           this.props.setLocations(results)
           this.props.history.push('/kys/locations');
         } else {
-          this.setState({ isLoading: false, error: true })
+          this.setState({ error: true })
         }
       })
   }
