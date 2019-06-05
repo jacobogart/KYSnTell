@@ -1,3 +1,50 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LocationPage should match snapshot 1`] = `undefined`;
+exports[`LocationPage should match snapshot 1`] = `
+<article
+  className="LocationPage"
+>
+  <Map
+    point={
+      Object {
+        "lat": "36.1678930",
+        "lng": "-86.7547047",
+      }
+    }
+  />
+  <div
+    className="location-info"
+  >
+    <h3>
+      Neighborhood Health
+    </h3>
+    <p>
+      617 S 8th St
+       
+      <br />
+       
+      Nashville, TN 37206-3819
+    </p>
+    <div
+      className="link-holder"
+    >
+      <a
+        href="tel:(615)-227-3000"
+      >
+        <i
+          class="fas fa-phone"
+        />
+        (615)-227-3000
+      </a>
+      <a
+        href="https://gettested.cdc.gov/gettested_redirect/21952"
+      >
+        <i
+          className="fas fa-globe"
+        />
+        Website
+      </a>
+    </div>
+  </div>
+</article>
+`;

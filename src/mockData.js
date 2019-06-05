@@ -162,3 +162,7 @@ export const messageContext = {
 }
 
  export const rejectedMessages = [{ ok: false, contact }]
+
+ export const routerLocation = {
+  pathname:'/kys/locations/21952'
+ }
