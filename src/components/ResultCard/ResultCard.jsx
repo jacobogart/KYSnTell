@@ -33,9 +33,5 @@ export class ResultCard extends Component {
         </div>
       </article>
     </Link>
-  )
-
-  }
-  
-    
+  )}
 }

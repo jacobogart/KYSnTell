@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MapPoint should match snapshot 1`] = `
+<div
+  className="MapPoint"
+>
+  <img
+    alt="Map Point"
+    src="https://www.shareicon.net/data/2016/09/15/829297_location_512x512.png"
+  />
+</div>
+`;
