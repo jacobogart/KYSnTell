@@ -1,0 +1,42 @@
+.LocationPage {
+  margin-top: 55px;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  .location-info {
+    background-color: grey;
+    padding: 10px;
+    font-size: 6vw;
+    width: 80%;
+    height: 27vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    h3 {
+      margin: 0;
+    }
+
+    p {
+      font-size: 6vw;
+      margin: 10px 0;
+    }
+
+    a {
+      color: white;
+    }
+
+    .fas {
+      margin-right: 5px;
+    }
+
+    .link-holder {
+      display: flex;
+      width: 85%;
+      justify-content: space-between;
+    }
+  }
+}
