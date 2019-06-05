@@ -40,8 +40,9 @@ exports[`DetailsPage should match snapshot 1`] = `
         onChange={[Function]}
       >
         <option
-          key="Select"
-          value="Select"
+          disabled={true}
+          selected={true}
+          value=""
         >
           Select
         </option>
@@ -104,6 +105,8 @@ exports[`DetailsPage should match snapshot 1`] = `
         onChange={[Function]}
       >
         <option
+          disabled={true}
+          selected={true}
           value=""
         >
           Select

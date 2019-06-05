@@ -89,6 +89,8 @@ export const cleanLocations = locations.map(location => locationCleaner(location
 
 export const fetchLocationsURL = "https://cors-anywhere.herokuapp.com/https://locator.hiv.gov/data?lat=38.9119463&long=-94.4136213&distance=10"
 
+export const fetchLocationsURLWODistance = "https://cors-anywhere.herokuapp.com/https://locator.hiv.gov/data?lat=38.9119463&long=-94.4136213"
+
 export const contact = '+18168682142';
 
 export const contacts = [contact, contact]

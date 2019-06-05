@@ -42,7 +42,7 @@ describe('SearchPage', () => {
 
   describe('Event Listeners', () => {
     it('should invoke handleSubmit when the form submits', () => {
-      wrapper.find('.SearchPage').simulate('submit', mock.submitEvent);
+      wrapper.find('.search-form').simulate('submit', mock.submitEvent);
       expect(mock.submitEvent.preventDefault).toHaveBeenCalled();
     });
 

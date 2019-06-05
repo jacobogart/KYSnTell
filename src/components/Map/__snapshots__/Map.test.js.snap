@@ -2,12 +2,7 @@
 
 exports[`Map should match snapshot 1`] = `
 <figure
-  style={
-    Object {
-      "height": "35vh",
-      "width": "80vw",
-    }
-  }
+  className="Map"
 >
   <GoogleMap
     bootstrapURLKeys={

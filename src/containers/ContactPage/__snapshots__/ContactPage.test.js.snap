@@ -4,13 +4,6 @@ exports[`ContactPage should match snapshot 1`] = `
 <div
   className="ContactPage"
 >
-  <div
-    className="contact-list-container"
-  >
-    <ol
-      className="contact-list"
-    />
-  </div>
   <form
     className="contact-form"
     onSubmit={[Function]}
@@ -28,6 +21,17 @@ exports[`ContactPage should match snapshot 1`] = `
     >
       Add Contact
     </button>
+    <div
+      className="contact-list-container"
+    >
+      <ol
+        className="contact-list"
+      >
+        <p>
+          Please add a phone number
+        </p>
+      </ol>
+    </div>
     <button
       className="contact-button"
       onClick={[Function]}
@@ -42,13 +46,6 @@ exports[`ContactPage should match snapshot if error is true 1`] = `
 <div
   className="ContactPage"
 >
-  <div
-    className="contact-list-container"
-  >
-    <ol
-      className="contact-list"
-    />
-  </div>
   <form
     className="contact-form"
     onSubmit={[Function]}
@@ -63,7 +60,7 @@ exports[`ContactPage should match snapshot if error is true 1`] = `
     <p
       className="error"
     >
-      Please enter a valid 10-digit phone number please.
+      Please enter a valid 10-digit phone number.
     </p>
     <button
       className="contact-button"
@@ -71,6 +68,17 @@ exports[`ContactPage should match snapshot if error is true 1`] = `
     >
       Add Contact
     </button>
+    <div
+      className="contact-list-container"
+    >
+      <ol
+        className="contact-list"
+      >
+        <p>
+          Please add a phone number
+        </p>
+      </ol>
+    </div>
     <button
       className="contact-button"
       onClick={[Function]}

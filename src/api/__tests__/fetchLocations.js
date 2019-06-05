@@ -12,6 +12,11 @@ describe('fetchLocations', () => {
     expect(fetch).toHaveBeenCalledWith(mock.fetchLocationsURL)
   });
 
+  it('should call fetch with the correct params if there is no distance', () => {
+    fetchLocations(mock.origin)
+    expect(fetch).toHaveBeenCalledWith(mock.fetchLocationsURLWODistance)
+  });
+
   it('should return an array of locations', async () => {
     const result = await fetchLocations(mock.origin, 10);
     expect(result).toEqual(mock.cleanLocations);

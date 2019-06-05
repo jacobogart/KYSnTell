@@ -4,14 +4,6 @@ exports[`LocationPage should match snapshot 1`] = `
 <article
   className="LocationPage"
 >
-  <Map
-    point={
-      Object {
-        "lat": "36.1678930",
-        "lng": "-86.7547047",
-      }
-    }
-  />
   <div
     className="location-info"
   >
@@ -46,5 +38,13 @@ exports[`LocationPage should match snapshot 1`] = `
       </a>
     </div>
   </div>
+  <Map
+    point={
+      Object {
+        "lat": "36.1678930",
+        "lng": "-86.7547047",
+      }
+    }
+  />
 </article>
 `;

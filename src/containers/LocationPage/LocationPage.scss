@@ -1,20 +1,22 @@
 .LocationPage {
-  margin-top: 55px;
+  margin-top: 70px;
   height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  margin-bottom: -20px;
 
   .location-info {
     background-color: grey;
-    padding: 10px;
-    font-size: 6vw;
-    width: 80%;
-    height: 27vh;
+    padding: 10px 15px;
+    font-size: 5vw;
+    width: 90vw;
+    height: 30vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    box-sizing: border-box;
 
     h3 {
       margin: 0;

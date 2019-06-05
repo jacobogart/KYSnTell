@@ -1,16 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SearchPage should match snapshot 1`] = `
-<div>
+<div
+  className="SearchPage"
+>
   <form
-    className="SearchPage"
+    className="search-form"
     onSubmit={[Function]}
   >
+    <p
+      className="search-msg"
+    >
+      Search for HIV/STD tesing centers near you
+    </p>
     <input
       className="search-input"
       name="zipcode"
       onChange={[Function]}
-      placeholder="Zipcode..."
+      placeholder="Enter zipcode..."
       type="text"
       value=""
     />
@@ -22,6 +29,13 @@ exports[`SearchPage should match snapshot 1`] = `
         name="distance"
         onChange={[Function]}
       >
+        <option
+          disabled={true}
+          selected={true}
+          value=""
+        >
+          Select distance...
+        </option>
         <option
           value="10"
         >
@@ -52,14 +66,16 @@ exports[`SearchPage should match snapshot 1`] = `
     <button
       type="submit"
     >
-      Use zipcode
+      Search
     </button>
   </form>
 </div>
 `;
 
 exports[`SearchPage should match snapshot when loading is true 1`] = `
-<div>
+<div
+  className="SearchPage"
+>
   <div
     className="spinner-container"
   >

@@ -12,7 +12,7 @@ export class Map extends Component {
       lng: +point.lng
     }
     return (
-      <figure style={{ height: '35vh', width: '80vw' }}>
+      <figure className="Map">
         <GoogleMapReact
           bootstrapURLKeys={{ key: googleKey }}
           defaultCenter={center}
