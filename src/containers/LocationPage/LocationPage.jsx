@@ -13,7 +13,7 @@ export const LocationPage = (props) => {
         <h3>{title}</h3>
         <p>{address.split(';')[0]} <br /> {address.split(';')[1]}</p>
         <div className="link-holder">
-          <a href={`tel:${telephone}`}><i class="fas fa-phone"></i>{telephone}</a>
+          <a href={`tel:${telephone}`}><i className="fas fa-phone"></i>{telephone}</a>
           <a href={link}><i className="fas fa-globe"></i>Website</a>
         </div>
       </div>
