@@ -1,3 +1,82 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ContactPage should match snapshot 1`] = `undefined`;
+exports[`ContactPage should match snapshot 1`] = `
+<div
+  className="ContactPage"
+>
+  <div
+    className="contact-list-container"
+  >
+    <ol
+      className="contact-list"
+    />
+  </div>
+  <form
+    className="contact-form"
+    onSubmit={[Function]}
+  >
+    <input
+      className="contact-input"
+      onChange={[Function]}
+      placeholder="(---) --- ----"
+      type="text"
+      value=""
+    />
+    <button
+      className="contact-button"
+      type="submit"
+    >
+      Add Contact
+    </button>
+    <button
+      className="contact-button"
+      onClick={[Function]}
+    >
+      Next Page
+    </button>
+  </form>
+</div>
+`;
+
+exports[`ContactPage should match snapshot if error is true 1`] = `
+<div
+  className="ContactPage"
+>
+  <div
+    className="contact-list-container"
+  >
+    <ol
+      className="contact-list"
+    />
+  </div>
+  <form
+    className="contact-form"
+    onSubmit={[Function]}
+  >
+    <input
+      className="contact-input"
+      onChange={[Function]}
+      placeholder="(---) --- ----"
+      type="text"
+      value=""
+    />
+    <p
+      className="error"
+    >
+      Please enter a valid 10-digit phone number please.
+    </p>
+    <button
+      className="contact-button"
+      type="submit"
+    >
+      Add Contact
+    </button>
+    <button
+      className="contact-button"
+      onClick={[Function]}
+    >
+      Next Page
+    </button>
+  </form>
+</div>
+`;

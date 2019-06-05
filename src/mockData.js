@@ -175,3 +175,15 @@ export const detailsChangeEvent = {
 }
 
 export const setDetails = jest.fn();
+
+export const contactChangeEvent = {
+  target: {
+    value: contact
+  }
+}
+
+export const contactBadChangeEvent = {
+  target: {
+    value: 'test'
+  }
+}

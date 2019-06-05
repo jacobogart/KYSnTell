@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { setContacts } from '../../actions';
 import phone from 'phone';
-class ContactPage extends Component {
+export class ContactPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -20,8 +20,9 @@ class ContactPage extends Component {
     e.preventDefault();
     const formattedContact = phone(this.state.input);
     formattedContact.length 
-      ? this.setState({ contacts: [...this.state.contacts, formattedContact[0]], input: '' })
-      : this.setState({ error: true, input: '' })
+      ? this.setState({ contacts: [...this.state.contacts, formattedContact[0]]})
+      : this.setState({ error: true })
+    this.setState({ input: '' })
   }
 
   storeContacts = () => {
@@ -33,7 +34,7 @@ class ContactPage extends Component {
     const contactList = this.state.contacts.map(contact => {
       let numbers = contact.split('');
       const [ , , a, b, c, d, e, f, g, h, i, j] = numbers;
-      return <li>{`(${a}${b}${c}) ${d}${e}${f}-${g}${h}${i}${j}`}</li>})
+      return <li key={contact}>{`(${a}${b}${c}) ${d}${e}${f}-${g}${h}${i}${j}`}</li>})
     return (
       <div className="ContactPage">
         <div className="contact-list-container">
