@@ -5,7 +5,14 @@ header {
   width: 100vw;
   color: white;
   letter-spacing: 5px;
+
+  a {
+    text-decoration: none;
+  }
+
   h1 {
+    color: white;
+    text-decoration: none;
     font-size: 100px;
     margin: 0;
   }

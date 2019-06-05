@@ -9,6 +9,7 @@ import { Header } from '../../components/Header/Header';
 import ContactPage from '../ContactPage/ContactPage';
 import DetailsPage from '../DetailsPage/DetailsPage';
 import PreviewPage from '../PreviewPage/PreviewPage';
+import { Footer } from '../../components/Footer/Footer';
 
 export class App extends Component {
   
@@ -25,6 +26,7 @@ export class App extends Component {
           <Route exact path='/tell/details' component={DetailsPage} />
           <Route exact path='/tell/preview' component={PreviewPage} />
         </Switch>
+        <Footer />
       </div>
     );
   }
