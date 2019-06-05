@@ -5,21 +5,7 @@ import Map from '../../components/Map/Map';
 class LocationPage extends Component {
   render() {
     const id = this.props.location.pathname.split('/')[3];
-    // const { title, address, point, link, telephone } = this.props.locations.find(location => location.id === id);
-  
-    const location = {
-      title: 'Healthy Living Project Incorporated',
-      link: 'https://gettested.cdc.gov/gettested_redirect/110871',
-      id: '110871',
-      address: '8650 W 95th St;Overland Park, KS 66212',
-      telephone: '(913)-708-1414',
-      point: {
-        lat: '38.9569213',
-        lng: '-94.6859152'
-      }
-    }
-
-    const { title, address, point, link, telephone } = location;
+    const { title, address, point, link, telephone } = this.props.locations.find(location => location.id === id);
 
     return (
       <article className='LocationPage'>
