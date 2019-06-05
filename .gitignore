@@ -6,7 +6,6 @@
 .pnp.js
 
 # utilities
-/src/api/utilities.js
 /src/mockData.js
 
 # testing

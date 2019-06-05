@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
-import { googleKey } from '../../api/utilities';
 import { MapPoint } from '../MapPoint/MapPoint';
 
 export class Map extends Component {
@@ -14,7 +13,7 @@ export class Map extends Component {
     return (
       <figure className="Map">
         <GoogleMapReact
-          bootstrapURLKeys={{ key: googleKey }}
+          bootstrapURLKeys={{ key: process.env.GOOGLE_KEY }}
           defaultCenter={center}
           defaultZoom={15}
         >
