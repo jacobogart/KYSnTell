@@ -5,7 +5,7 @@ exports[`Splash should match snapshot 1`] = `
   className="Splash"
 >
   <h4>
-    Know you status
+    Know your status
   </h4>
   <Link
     className="main-link"

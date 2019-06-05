@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 export const Splash = () => {
   return (
     <div className="Splash">
-      <h4>Know you status</h4>
+      <h4>Know your status</h4>
       <Link to="/kys" className="main-link" >
         KYS
       </Link>

@@ -2,6 +2,9 @@
   "name": "kys-n-tell",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "11.7.0"
+  },
   "dependencies": {
     "body-parser": "^1.19.0",
     "eslint-plugin-import": "^2.17.3",
