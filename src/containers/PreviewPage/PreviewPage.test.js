@@ -126,6 +126,13 @@ describe('PreviewPage', () => {
       await instance.handleSend();
       expect(instance.handleError).toHaveBeenCalled();
     });
+
+    it('should call handleError if there is an error', async () => {
+      fetchSendMessage.mockImplementation(() => Promise.reject())
+      jest.spyOn(instance, 'handleError');
+      await instance.handleSend();
+      expect(instance.handleError).toHaveBeenCalled();
+    });
   });
 
   describe('handleError', () => {
