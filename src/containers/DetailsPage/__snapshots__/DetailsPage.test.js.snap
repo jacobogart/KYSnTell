@@ -1,3 +1,157 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DetailsPage should match snapshot 1`] = `undefined`;
+exports[`DetailsPage should match snapshot 1`] = `
+<div
+  className="DetailsPage"
+>
+  <p>
+    Contacts
+  </p>
+  <ol
+    className="contact-list-details contact-list"
+  >
+    <li
+      key="+18168682142"
+    >
+      (816) 868-2142
+    </li>
+    <li
+      key="+18168682142"
+    >
+      (816) 868-2142
+    </li>
+  </ol>
+  <form
+    className="details-form"
+    onSubmit={[Function]}
+  >
+    <div
+      className="select-holder"
+    >
+      <label
+        htmlFor="diagnosis"
+      >
+        Diagnosis
+      </label>
+      <select
+        className="search-input"
+        id="diagnosis"
+        name="diagnosis"
+        onChange={[Function]}
+      >
+        <option
+          key="Select"
+          value="Select"
+        >
+          Select
+        </option>
+        <option
+          key="HIV/AIDS"
+          value="HIV/AIDS"
+        >
+          HIV/AIDS
+        </option>
+        <option
+          key="HPV(Human Papillomavirus)"
+          value="HPV(Human Papillomavirus)"
+        >
+          HPV(Human Papillomavirus)
+        </option>
+        <option
+          key="Chlamydia"
+          value="Chlamydia"
+        >
+          Chlamydia
+        </option>
+        <option
+          key="Gonorrhea"
+          value="Gonorrhea"
+        >
+          Gonorrhea
+        </option>
+        <option
+          key="Syphilis"
+          value="Syphilis"
+        >
+          Syphilis
+        </option>
+        <option
+          key="Herpes"
+          value="Herpes"
+        >
+          Herpes
+        </option>
+        <option
+          key="Trichomoniasis"
+          value="Trichomoniasis"
+        >
+          Trichomoniasis
+        </option>
+      </select>
+    </div>
+    <div
+      className="select-holder"
+    >
+      <label
+        htmlFor="timeFrame"
+      >
+        Time since last test
+      </label>
+      <select
+        className="search-input"
+        id="timeFrame"
+        name="timeFrame"
+        onChange={[Function]}
+      >
+        <option
+          value=""
+        >
+          Select
+        </option>
+        <option
+          value="month"
+        >
+          one month
+        </option>
+        <option
+          value="two months"
+        >
+          two months
+        </option>
+        <option
+          value="three months"
+        >
+          three months
+        </option>
+        <option
+          value="six months"
+        >
+          six months
+        </option>
+        <option
+          value="year"
+        >
+          year
+        </option>
+        <option
+          value="other"
+        >
+          other
+        </option>
+      </select>
+    </div>
+    <input
+      className="search-input notes"
+      name="additionalNotes"
+      onChange={[Function]}
+      placeholder="Additional notes..."
+      type="text"
+    />
+    <button
+      type="submit"
+    >
+      Preview
+    </button>
+  </form>
+</div>
+`;

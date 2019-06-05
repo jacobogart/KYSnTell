@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { setDetails } from '../../actions';
 
-class DetailsPage extends Component {
+export class DetailsPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -27,14 +27,14 @@ class DetailsPage extends Component {
     const contactList = this.props.contacts.map(contact => {
       let numbers = contact.split('');
       const [, , a, b, c, d, e, f, g, h, i, j] = numbers;
-      return <li>{`(${a}${b}${c}) ${d}${e}${f}-${g}${h}${i}${j}`}</li>
+      return <li key={contact}>{`(${a}${b}${c}) ${d}${e}${f}-${g}${h}${i}${j}`}</li>
     })
     const contactsDisplay = 
       <ol className="contact-list-details contact-list">
         {contactList}
       </ol>
     const stds = ['Select', 'HIV/AIDS', 'HPV(Human Papillomavirus)', 'Chlamydia', 'Gonorrhea', 'Syphilis', 'Herpes', 'Trichomoniasis'];
-    const stdOptions = stds.map(std => <option value={std}>{std}</option>)
+    const stdOptions = stds.map(std => <option key={std} value={std}>{std}</option>)
     return (
       <div className="DetailsPage">
         <p>Contacts</p>

@@ -166,3 +166,12 @@ export const messageContext = {
  export const routerLocation = {
   pathname:'/kys/locations/21952'
  }
+
+export const detailsChangeEvent = {
+  target: {
+    name: 'diagnosis',
+    value: 'Herpes'
+  }
+}
+
+export const setDetails = jest.fn();
