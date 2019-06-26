@@ -1,6 +1,9 @@
 # Kys n' Tell
 
+### Know Your Status
 ![Kys n' Tell Screenshot - Know Your Status](https://media.giphy.com/media/UW7x51bfjYEDI0ejn7/giphy.gif)
+### Tell Your Partners
+![Kys n' Tell Screenshot - Tell Your Partners](https://media.giphy.com/media/YRJxYE6SVBJTTQDZg0/giphy.gif)
 
 ## Installation - Back-End
 Clone the repo - https://github.com/lynnerang/helms-keep.git
