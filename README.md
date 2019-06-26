@@ -1,6 +1,6 @@
 # Kys n' Tell
 
-![Kys n' Tell Screenshot - Know Your Status](https://i.imgur.com/FGFX0on.gifv)
+![Kys n' Tell Screenshot - Know Your Status](https://i.imgur.com/FGFX0on.gif)
 
 ## Installation - Back-End
 Clone the repo - https://github.com/lynnerang/helms-keep.git
