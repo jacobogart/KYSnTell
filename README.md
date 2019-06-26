@@ -8,7 +8,7 @@
 ## Installation
 Clone the repo - https://github.com/jacobogart/KYSnTell.git
 
-Add .env file in the root directory in the following format:
+Add `.env` file in the root directory in the following format:
 
 ```
 TWILIO_ACCOUNT_SID='<Your Twillio Account SID>'
@@ -23,7 +23,5 @@ Run `npm start`
 
 ## Testing
 Website is tested with Jest and Enzyme
-
-*from the `helms-keep/client` directory*
 
 Run `npm run test` to see test suite
