@@ -1,5 +1,7 @@
 # Kys n' Tell
 
+#### By [Jacob Bogart](https://github.com/jacobogart)
+
 ### Know Your Status
 ![Kys n' Tell Screenshot - Know Your Status](https://media.giphy.com/media/UW7x51bfjYEDI0ejn7/giphy.gif)
 ### Tell Your Partners
