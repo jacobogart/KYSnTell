@@ -24,6 +24,8 @@ Run `npm install` from the root directory
 
 Run `npm start`
 
+Use Dev Tools to view as mobile
+
 ## Testing
 Website is tested with Jest and Enzyme
 
