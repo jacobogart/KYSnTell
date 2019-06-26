@@ -22,7 +22,7 @@ REACT_APP_GOOGLE_KEY='<Your Google API Key>'
 
 Run `npm install` from the root directory
 
-Run `npm start`
+Run `npm run dev`
 
 Use Dev Tools to view as mobile
 
