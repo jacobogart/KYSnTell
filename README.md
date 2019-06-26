@@ -6,9 +6,15 @@
 ![Kys n' Tell Screenshot - Tell Your Partners](https://media.giphy.com/media/YRJxYE6SVBJTTQDZg0/giphy.gif)
 
 ## Installation
-Clone the repo - https://github.com/lynnerang/helms-keep.git
+Clone the repo - https://github.com/jacobogart/KYSnTell.git
 
-Run `cd helms-keep/server` from the root directory
+Add .env file in the root directory in the following format:
+
+```TWILIO_ACCOUNT_SID='<Your Twillio Account SID>'
+TWILIO_AUTH_TOKEN='<Your Twillio Authorization Token>'
+TWILIO_PHONE_NUMBER='<Your Twillio Phone Number>'
+REACT_APP_GOOGLE_KEY='<Your Google API Key>'
+```
 
 Run `npm install` from the root directory
 
