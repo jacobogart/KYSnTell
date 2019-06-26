@@ -5,7 +5,7 @@
 ### Tell Your Partners
 ![Kys n' Tell Screenshot - Tell Your Partners](https://media.giphy.com/media/YRJxYE6SVBJTTQDZg0/giphy.gif)
 
-## Installation - Back-End
+## Installation
 Clone the repo - https://github.com/lynnerang/helms-keep.git
 
 Run `cd helms-keep/server` from the root directory
@@ -13,15 +13,6 @@ Run `cd helms-keep/server` from the root directory
 Run `npm install` from the root directory
 
 Run `npm start`
-
-## Installation - Front-End
-*In a separate tab*
-
-Run `cd helms-keep/client` from the root directory
-
-Run `npm install` from the client directory
-
-Run `npm start` and visit localhost:3000 in your browser
 
 ## Testing
 Website is tested with Jest and Enzyme
